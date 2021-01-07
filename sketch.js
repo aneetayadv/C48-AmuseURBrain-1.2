@@ -90,7 +90,7 @@ function setup() {
   btnPlay = createButton('Play'); //createImg('assets/musicOn.png');
   btnPlay.mousePressed(togglePlay);
   btnPlay.position(width/1.1 , height/1.1);
-  btnPlay.style("background-image: url('assets/musicOff1.png');color: transparent;background-size: cover;padding: 10px 10px 10px 10px;background-position: center;border: hidden;)");
+  btnPlay.style("background-image: url('/assets/musicOff1.png');color: transparent;background-size: cover;padding: 10px 10px 10px 10px;background-position: center;border: hidden;)");
   
   slider = createSlider(0,1,0.5,0.01);
   slider.position(width/1.1 - 30, height/1.03);
@@ -484,12 +484,12 @@ function togglePlay(){
   if(!welcomeMusic.isPlaying()){
     welcomeMusic.loop();
     //btnPlay.html("Pause");
-    btnPlay.style("background-image: url('assets/musicOn1.png')");
+    btnPlay.style("background-image: url('/assets/musicOn1.png')");
   }
   else{
     welcomeMusic.pause();
     //btnPlay.html("Play");
-    btnPlay.style("background-image: url('assets/musicOff1.png')");
+    btnPlay.style("background-image: url('/assets/musicOff1.png')");
 
   }
 }
