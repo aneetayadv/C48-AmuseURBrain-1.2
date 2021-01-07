@@ -31,50 +31,50 @@ function preload(){
 
   r11i = loadImage("/assets/riddle1-2.png");
   r12i = loadImage("/assets/riddle1-1.png");
-  r13i = loadImage("/assets/riddle1-3.png");
+  r13i = loadImage("assets/riddle1-3.png");
 
-  r21i = loadImage("/assets/riddle2-1.png");
-  r22i = loadImage("/assets/riddle2-2.png");
-  r23i = loadImage("/assets/riddle2-3.png");
+  r21i = loadImage("assets/riddle2-1.png");
+  r22i = loadImage("assets/riddle2-2.png");
+  r23i = loadImage("assets/riddle2-3.png");
 
-  r31i = loadImage("/assets/riddle3-1.png");
-  r32i = loadImage("/assets/riddle3-2.png");
-  r33i = loadImage("/assets/riddle3-3.png");
+  r31i = loadImage("assets/riddle3-1.png");
+  r32i = loadImage("assets/riddle3-2.png");
+  r33i = loadImage("assets/riddle3-3.png");
 
-  bg1 = loadImage("/assets/bg1.jpg");
-  bg2 = loadImage("/assets/bg2.jpg");
-  bg3 = loadImage("/assets/bg3.jpg");
+  bg1 = loadImage("assets/bg1.jpg");
+  bg2 = loadImage("assets/bg2.jpg");
+  bg3 = loadImage("assets/bg3.jpg");
 
-  welcome = loadImage("/assets/welcome.png");
-  welcomeMusic = loadSound("/assets/aniMusic1.mp3");
+  welcome = loadImage("assets/welcome.png");
+  welcomeMusic = loadSound("assets/aniMusic1.mp3");
 
-  bgMusic = loadSound("/assets/music.mp3");
+  bgMusic = loadSound("assets/music.mp3");
 
-  hero = loadImage("/assets/hero.png");
-  heroBack = loadImage("/assets/heroBack.png");
+  hero = loadImage("assets/hero.png");
+  heroBack = loadImage("assets/heroBack.png");
 
-  messageImg = loadImage("/assets/amusePop.png");
+  messageImg = loadImage("assets/amusePop.png");
 
-  doorImg = loadAnimation("/assets/door1.png")
-  drAni = loadAnimation("/assets/door4.png");
+  doorImg = loadAnimation("assets/door1.png")
+  drAni = loadAnimation("assets/door4.png");
 
-  platform = loadImage("/assets/platform.png");
+  platform = loadImage("assets/platform.png");
 
-  plPlatform = loadImage("/assets/plPlatform.png");
+  plPlatform = loadImage("assets/plPlatform.png");
 
-  gameover = loadImage("/assets/lostImg.jpg");
-  overlay = loadImage("/assets/overlay.png");
+  gameover = loadImage("assets/lostImg.jpg");
+  overlay = loadImage("assets/overlay.png");
 
-  welcomeMsg = loadImage("/assets/welcomeMSG.png");
+  welcomeMsg = loadImage("assets/welcomeMSG.png");
 
-  musicOnImg = loadImage("/assets/musicOn.png");
-  musicOffImg = loadImage("/assets/musicOff.png");
+  musicOnImg = loadImage("assets/musicOn.png");
+  musicOffImg = loadImage("assets/musicOff.png");
 
-  rule = loadImage("/assets/rules.png");
-  winImg = loadImage("/assets/win2.jpg");
-  starsImg = loadImage("/assets/stars.png");
-  nextPopup = loadImage("/assets/nextScene.png");
-  nextImg = loadImage("/assets/nextImg.png");
+  rule = loadImage("assets/rules.png");
+  winImg = loadImage("/ssets/win2.jpg");
+  starsImg = loadImage("assets/stars.png");
+  nextPopup = loadImage("assets/nextScene.png");
+  nextImg = loadImage("assets/nextImg.png");
 }
 
 function setup() {
@@ -90,7 +90,7 @@ function setup() {
   btnPlay = createButton('Play'); //createImg('assets/musicOn.png');
   btnPlay.mousePressed(togglePlay);
   btnPlay.position(width/1.1 , height/1.1);
-  btnPlay.style("background-image: url('/assets/musicOff1.png');color: transparent;background-size: cover;padding: 10px 10px 10px 10px;background-position: center;border: hidden;)");
+  btnPlay.style("background-image: url('assets/musicOff1.png');color: transparent;background-size: cover;padding: 10px 10px 10px 10px;background-position: center;border: hidden;)");
   
   slider = createSlider(0,1,0.5,0.01);
   slider.position(width/1.1 - 30, height/1.03);
@@ -484,12 +484,12 @@ function togglePlay(){
   if(!welcomeMusic.isPlaying()){
     welcomeMusic.loop();
     //btnPlay.html("Pause");
-    btnPlay.style("background-image: url('/assets/musicOn1.png')");
+    btnPlay.style("background-image: url('assets/musicOn1.png')");
   }
   else{
     welcomeMusic.pause();
     //btnPlay.html("Play");
-    btnPlay.style("background-image: url('/assets/musicOff1.png')");
+    btnPlay.style("background-image: url('assets/musicOff1.png')");
 
   }
 }
