@@ -28,9 +28,14 @@ var fade;
 var fadeAmount = 1
 
 function preload(){
+  bg1 = loadImage("assets/bg1.jpg");
+  bg2 = loadImage("assets/bg2.jpg");
+  bg3 = loadImage("assets/bg3.jpg");
 
-  r11i = loadImage("/assets/riddle1-2.png");
-  r12i = loadImage("/assets/riddle1-1.png");
+  welcome = loadImage("assets/welcome.png");
+  welcomeMusic = loadSound("assets/aniMusic1.mp3");
+  r11i = loadImage("assets/riddle1-2.png");
+  r12i = loadImage("assets/riddle1-1.png");
   r13i = loadImage("assets/riddle1-3.png");
 
   r21i = loadImage("assets/riddle2-1.png");
@@ -40,13 +45,6 @@ function preload(){
   r31i = loadImage("assets/riddle3-1.png");
   r32i = loadImage("assets/riddle3-2.png");
   r33i = loadImage("assets/riddle3-3.png");
-
-  bg1 = loadImage("assets/bg1.jpg");
-  bg2 = loadImage("assets/bg2.jpg");
-  bg3 = loadImage("assets/bg3.jpg");
-
-  welcome = loadImage("assets/welcome.png");
-  welcomeMusic = loadSound("assets/aniMusic1.mp3");
 
   bgMusic = loadSound("assets/music.mp3");
 
@@ -71,7 +69,7 @@ function preload(){
   musicOffImg = loadImage("assets/musicOff.png");
 
   rule = loadImage("assets/rules.png");
-  winImg = loadImage("/ssets/win2.jpg");
+  winImg = loadImage("assets/win2.jpg");
   starsImg = loadImage("assets/stars.png");
   nextPopup = loadImage("assets/nextScene.png");
   nextImg = loadImage("assets/nextImg.png");
