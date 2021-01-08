@@ -61,7 +61,7 @@ function preload(){
   plPlatform = loadImage("assets/plPlatform.png");
 
   gameover = loadImage("assets/lostImg.jpg");
-  overlay = loadImage("assets/overlay.png");
+  overlay = loadImage("assets/Overlay.png");
 
   welcomeMsg = loadImage("assets/welcomeMSG.png");
 
