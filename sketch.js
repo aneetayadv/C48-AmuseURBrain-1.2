@@ -82,10 +82,10 @@ function setup() {
 
   btnNext = createButton("Next");
   btnNext.mousePressed(()=>gameState=1);
-  btnNext.position(width/2 , height/1.2);
+  btnNext.position(width/2 - 30 , height/1.2);
   btnNext.hide();
 
-  btnPlay = createButton('Play'); //createImg('assets/musicOn.png');
+  btnPlay = createButton('Play'); 
   btnPlay.mousePressed(togglePlay);
   btnPlay.position(width/1.1 , height/1.1);
   btnPlay.style("background-image: url('assets/musicOff1.png');color: transparent;background-size: cover;padding: 10px 10px 10px 10px;background-position: center;border: hidden;)");
@@ -199,7 +199,6 @@ function setup() {
 
   successPopUp = createSprite(width/2,height/2);
   successPopUp.addImage(nextPopup);
-  //successPopUp.scale = 0.3;
   successPopUp.visible = false;
 
   btnNextRiddle = createImg("assets/nextImg.png");
@@ -216,6 +215,7 @@ function draw() {
   
   if(gameState === 0){
     background(welcome);
+    btnNext.show();
     image(hero , width/1.3 , height/4.5);
 
     if(overlaySize < 100){
@@ -227,9 +227,6 @@ function draw() {
     welcomeMusic.setVolume(slider.value());
   }
   else if(gameState === 1){
-
-  //  nextPopup.visible = false;
-  //  btnNextRiddle.hide();
 
     background(bg1);
     overlaySize =1;
@@ -251,9 +248,6 @@ function draw() {
     showRiddle(dr2,r12);
     showRiddle(dr3,r13);
 
-   /* openDoor(dr1);
-    openDoor(dr2);
-    openDoor(dr3);*/
   }
   else if(gameState === 2){
     dr1.visible = false;
@@ -263,9 +257,6 @@ function draw() {
     r11.visible = false;
     r12.visible = false;
     r13.visible = false;
-
-  //  nextPopup.visible = false;
-  //  btnNextRiddle.hide();
 
     background(bg2);
     
@@ -285,9 +276,6 @@ function draw() {
     showRiddle(dr5,r22);
     showRiddle(dr6,r23);
 
-   /* openDoor(dr4);
-    openDoor(dr5);
-    openDoor(dr6);*/
   }
   else if(gameState === 3){
     overlaySize =1;
@@ -299,8 +287,6 @@ function draw() {
     r22.visible = false;
     r23.visible = false;
 
-  //  nextPopup.visible = false;
-  //  btnNextRiddle.hide();
 
     background(bg3);
 
@@ -352,7 +338,6 @@ function draw() {
           overlaySize++;
       }
       imageMode(CENTER);
-     // image(overlay, width/2 - overlaySize * 6, height/2 - overlaySize * 2, overlaySize * 12, overlaySize * 4);
      image(overlay, width/2, height/2 ,overlaySize*13, overlaySize*7);
       
       fill("yellow");
@@ -411,7 +396,7 @@ function draw() {
       overlaySize++;
     }
       imageMode(CENTER);
-    // image(overlay, width/2 - overlaySize * 6, height/2 - overlaySize * 2, overlaySize * 12, overlaySize * 4);
+   
     image(starsImg, width/3, height/2 ,overlaySize*6, overlaySize*6);
 
     //draw blinking text
@@ -437,13 +422,6 @@ function draw() {
   }
 }
 
-function mouseClicked() {
-  if (gameState === 0) {
-   // message.visible = true;
-    btnNext.show();
-  } 
-}
-
 function showRiddle(door,riddle){
   if(mouseIsOver(door)){
     riddle.visible =true;
@@ -453,17 +431,14 @@ function showRiddle(door,riddle){
 }
 
 function openDoor(door){
- // if(mousePressedOver(door)){
     door.changeAnimation("animation",drAni);
     successPopUp.x = door.x;
     successPopUp.y=door.y;
     successPopUp.visible = true;
 
    
-    btnNextRiddle.position(door.x,door.y+50,10,10);
+    btnNextRiddle.position(door.x-80,door.y+50,10,10);
     btnNextRiddle.show();
-   // btnNext = 
-    // }
 
 }
 
@@ -481,12 +456,10 @@ function nextRiddle(){
 function togglePlay(){
   if(!welcomeMusic.isPlaying()){
     welcomeMusic.loop();
-    //btnPlay.html("Pause");
     btnPlay.style("background-image: url('assets/musicOn1.png')");
   }
   else{
     welcomeMusic.pause();
-    //btnPlay.html("Play");
     btnPlay.style("background-image: url('assets/musicOff1.png')");
 
   }
